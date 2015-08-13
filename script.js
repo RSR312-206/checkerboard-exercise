@@ -17,16 +17,16 @@ function checkerBoard() {
   body.appendChild(checker);
 }
 
-  function randomColor() {
+function randomColor() {
 
-    var colorArray = '0123456789abcdef'.split('');
-    var color = '#';
+  var colorArray = '0123456789abcdef'.split('');
+  var color = '#';
 
-    for (var i = 0; i < 6; i ++) {
-        color += colorArray[Math.floor(Math.random() * 16)];
-    }
-    return color;
+  for (var i = 0; i < 6; i ++) {
+      color += colorArray[Math.floor(Math.random() * 16)];
   }
+  return color;
+}
 
   var audio = new Audio('liebestod.mp3');
   audio.play();
@@ -39,9 +39,6 @@ function checkerBoard() {
   setInterval(reset, 2000);
   setInterval(checkerBoard, 2000);
 
-
-//   ar audio = new Audio('audio_file.mp3');
-// audio.play();
 
 
 
