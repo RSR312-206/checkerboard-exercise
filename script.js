@@ -1,20 +1,24 @@
 
 function checkerBoard() {
-  var body = document.querySelector('body');
-  var checker = document.createElement('div');
 
-  for (var i = 0; i < 63; i++)
+  for (var i = 0; i < 63; i++) {
+
+    var body = document.querySelector('body');
+    var checker = document.createElement('div');
+
+    checker.style.float = "left";
+    checker.style.paddingBottom = '11.1%';
+    checker.style.width = '11.1%';
+
     if (i % 2 === 0) {
       checker.style.backgroundColor = randomColor();
+      body.appendChild(checker);
     } else if (i % 1 === 0) {
       checker.style.backgroundColor = randomColor();
+      body.appendChild(checker);
     }
+  }
 
-  checker.style.float = "left";
-  checker.style.paddingBottom = '11.1%';
-  checker.style.width = '11.1%';
-
-  body.appendChild(checker);
 }
 
 function randomColor() {
