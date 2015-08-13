@@ -28,6 +28,9 @@ function checkerBoard() {
     return color;
   }
 
+  var audio = new Audio('liebestod.mp3');
+  audio.play();
+
   function reset() {
     document.body.innerHTML = '';
   }
@@ -35,6 +38,10 @@ function checkerBoard() {
 
   setInterval(reset, 2000);
   setInterval(checkerBoard, 2000);
+
+
+//   ar audio = new Audio('audio_file.mp3');
+// audio.play();
 
 
 
