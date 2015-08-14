@@ -9,6 +9,7 @@ function checkerBoard() {
     checker.style.float = "left";
     checker.style.paddingBottom = '11.1%';
     checker.style.width = '11.1%';
+    checker.opacity= '0.5';
 
     if (i % 2 === 0) {
       checker.style.backgroundColor = randomColor();
@@ -32,12 +33,15 @@ function randomColor() {
   return color;
 }
 
+function reset() {
+  document.body.innerHTML = '';
+}
+
+
+
   var audio = new Audio('liebestod.mp3');
   audio.play();
 
-  function reset() {
-    document.body.innerHTML = '';
-  }
 
 
   setInterval(reset, 2000);
